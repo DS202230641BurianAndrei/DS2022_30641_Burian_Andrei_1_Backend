@@ -9,7 +9,7 @@ public class HistoryUpdateDTO {
 
     private Date timestamp;
 
-    private int measurement;
+    private float measurement;
 
     private Long deviceId;
 
@@ -17,7 +17,7 @@ public class HistoryUpdateDTO {
 
     }
 
-    public HistoryUpdateDTO(Long id, Date timestamp, int measurement, Long deviceId) {
+    public HistoryUpdateDTO(Long id, Date timestamp, float measurement, Long deviceId) {
         this.id = id;
         this.timestamp = timestamp;
         this.measurement = measurement;
@@ -40,11 +40,11 @@ public class HistoryUpdateDTO {
         this.timestamp = timestamp;
     }
 
-    public int getMeasurement() {
+    public float getMeasurement() {
         return measurement;
     }
 
-    public void setMeasurement(int measurement) {
+    public void setMeasurement(float measurement) {
         this.measurement = measurement;
     }
 

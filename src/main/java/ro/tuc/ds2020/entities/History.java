@@ -19,7 +19,7 @@ public class History implements Serializable {
     private Date timestamp;
 
     @Column(name = "measurement", nullable = false)
-    private int measurement;
+    private float measurement;
 
     @ManyToOne
     @JoinColumn(name = "device_id", referencedColumnName = "id")
@@ -29,14 +29,14 @@ public class History implements Serializable {
 
     }
 
-    public History(Long id, Date timestamp, int measurement, Device device) {
+    public History(Long id, Date timestamp, float measurement, Device device) {
         this.id = id;
         this.timestamp = timestamp;
         this.measurement = measurement;
         this.device = device;
     }
 
-    public History(Date timestamp, int measurement, Device device) {
+    public History(Date timestamp, float measurement, Device device) {
         this.timestamp = timestamp;
         this.measurement = measurement;
         this.device = device;
@@ -58,11 +58,11 @@ public class History implements Serializable {
         this.timestamp = date;
     }
 
-    public int getMeasurement() {
+    public float getMeasurement() {
         return measurement;
     }
 
-    public void setMeasurement(int measurement) {
+    public void setMeasurement(float measurement) {
         this.measurement = measurement;
     }
 

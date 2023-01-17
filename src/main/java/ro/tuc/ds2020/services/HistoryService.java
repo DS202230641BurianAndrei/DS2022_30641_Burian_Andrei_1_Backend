@@ -83,7 +83,7 @@ public class HistoryService {
         //initialized with the current values
         //if no new value is provided the old one is preserved
         Date newTimestamp = history.getTimestamp();
-        int newMeasurement = history.getMeasurement();
+        float newMeasurement = history.getMeasurement();
         Long newDeviceId = null;
         if(history.getDevice() != null){
             newDeviceId = history.getDevice().getId();

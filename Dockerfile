@@ -1,4 +1,5 @@
-FROM maven:3.6.3-jdk-11 AS builder
+FROM maven:3.6.3-jdk-8 AS builder
+
 
 COPY ./src/ /root/src
 COPY ./pom.xml /root/
